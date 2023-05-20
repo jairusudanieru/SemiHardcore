@@ -1,9 +1,12 @@
+# All message can use the character & for color codes.
+# Check https://minecraft.fandom.com/wiki/Formatting_codes for more information.
 # The message when the player dies and removes a heart.
-heartRemoved: 'Remove 1 heart from you!'
+heartRemoved: 'Removed 1 heart from you!'
 # The message when the player uses the heart item to gain a heart.
 heartAdded: 'Added 1 heart to you!'
 # The message when the player uses the "/withdraw" command to get their heart.
-heartWithdraw: 'Removed!'
+# You can use the placeholder %amount% to get the amount of hearts removed.
+heartWithdraw: 'Withdrew %amount% heart/s from you!'
 # The message when the player tries to use a heart item with a max heart.
 maxHeartAlready: 'You already have the maximum hearts allowed!'
 # The message when the player uses the "/withdraw" command without enough hearts.
