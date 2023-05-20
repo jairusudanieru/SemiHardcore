@@ -43,7 +43,6 @@ public class Withdraw implements TabCompleter, CommandExecutor {
         return Collections.emptyList();
     }
 
-
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {
         if (!command.getName().equalsIgnoreCase("withdraw")) return false;
