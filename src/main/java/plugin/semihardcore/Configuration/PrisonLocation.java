@@ -17,8 +17,9 @@ public class PrisonLocation {
     }
 
     public Location prison(Player player) {
-        Location location = config.getLocation("prison");
-        if (location == null) return player.getWorld().getSpawnLocation();
+        Location location = config.getLocation("prison.location");
+        boolean enabled = config.getBoolean("prison.enabled");
+        if (location == null || !enabled ) return player.getWorld().getSpawnLocation();
         return location;
     }
 

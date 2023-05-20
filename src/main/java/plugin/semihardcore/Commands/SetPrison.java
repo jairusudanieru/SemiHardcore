@@ -21,8 +21,8 @@ public class SetPrison implements CommandExecutor {
         if (!command.getName().equalsIgnoreCase("setprison")) return false;
         if (!(sender instanceof Player) || args.length != 0) return false;
         Player player = (Player) sender;
-        Location prison = player.getLocation();
-        plugin.getConfig().set("prison",prison);
+        Location location = player.getLocation();
+        plugin.getConfig().set("prison.location",location);
         plugin.saveConfig();
         player.sendMessage(Component.text("Prison Location set successfully!"));
         return true;
