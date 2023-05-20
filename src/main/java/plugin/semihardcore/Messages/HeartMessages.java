@@ -18,22 +18,23 @@ public class HeartMessages {
 
     public String heartRemoved() {
         String message = config.getString("heartRemoved");
-        return (message != null && !message.isEmpty()) ? message : null;
+        if (message == null) return null;
+        message = message.replace("&","§");
+        return message;
     }
 
     public String heartAdded() {
         String message = config.getString("heartAdded");
-        return (message != null && !message.isEmpty()) ? message : null;
-    }
-
-    public String heartWithdraw() {
-        String message = config.getString("heartWithdraw");
-        return (message != null && !message.isEmpty()) ? message : null;
+        if (message == null) return null;
+        message = message.replace("&","§");
+        return message;
     }
 
     public String maxHeartAlready() {
         String message = config.getString("maxHeartAlready");
-        return (message != null && !message.isEmpty()) ? message : null;
+        if (message == null) return null;
+        message = message.replace("&","§");
+        return message;
     }
 
 }

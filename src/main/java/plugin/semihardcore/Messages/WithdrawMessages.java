@@ -18,12 +18,23 @@ public class WithdrawMessages {
 
     public String noEnoughHearts() {
         String message = config.getString("noEnoughHearts");
-        return (message != null && !message.isEmpty()) ? message : null;
+        if (message == null) return null;
+        message = message.replace("&","§");
+        return message;
     }
 
     public String mustHaveFullHearts() {
         String message = config.getString("mustHaveFullHearts");
-        return (message != null && !message.isEmpty()) ? message : null;
+        if (message == null) return null;
+        message = message.replace("&","§");
+        return message;
+    }
+
+    public String heartWithdraw(int numHearts) {
+        String amount = String.valueOf(numHearts);
+        String message = config.getString("heartWithdraw");
+        message = message.replace("&","§").replace("%amount%",amount);
+        return message;
     }
 
 

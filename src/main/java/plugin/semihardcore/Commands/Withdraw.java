@@ -16,6 +16,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 import plugin.semihardcore.Configuration.MaxHearts;
+import plugin.semihardcore.Messages.HeartMessages;
 import plugin.semihardcore.Messages.WithdrawMessages;
 import plugin.semihardcore.Recipes.HeartItem;
 
@@ -39,15 +40,17 @@ public class Withdraw implements TabCompleter, CommandExecutor {
             List<String> list = new ArrayList<>();
             for (int i = 1; i <= (hearts-1); i++) list.add(String.valueOf(i));
             return list;
+        } else {
+            return Collections.emptyList();
         }
-        return Collections.emptyList();
     }
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {
         if (!command.getName().equalsIgnoreCase("withdraw")) return false;
         if (!(sender instanceof Player) || args.length != 1) return false;
-        if (!args[0].matches("\\d+")) return false;
+        if (!args[0].matches("\\d+")) return true;
+
         Player player = (Player) sender;
         int numHearts = Integer.parseInt(args[0]);
         HeartItem heartItem = new HeartItem();
@@ -81,6 +84,7 @@ public class Withdraw implements TabCompleter, CommandExecutor {
             player.setHealth(newValue);
             player.spawnParticle(Particle.HEART, playerLocation, 30);
             player.playSound(player.getLocation(), Sound.ENTITY_ENDER_DRAGON_HURT, 1f, 1f);
+            player.sendMessage(Component.text(messages.heartWithdraw(numHearts)));
             return true;
         }
         player.sendMessage(Component.text(messages.noEnoughHearts()));

@@ -9,4 +9,4 @@ commands:
     permission: op
   withdraw:
     description: Withdraw player hearts
-    usage: /withdraw
+    usage: /withdraw <number of hearts>
