@@ -1,6 +1,11 @@
+# Set this to true to get the effect similar to eating an enchanted golden apple when the player respawns
 safeRespawn: true
+# The maximum heart a player is allowed to obtain
 maxHearts: 20
+# The name of the heart item
 heartName: 'Player Heart'
+
+# The location of the prison, where the player will be teleported to after their final death
 prison:
   ==: org.bukkit.Location
   world: world

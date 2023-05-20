@@ -1,6 +1,12 @@
+# The message when the player dies and removes a heart.
 heartRemoved: 'Remove 1 heart from you!'
+# The message when the player uses the heart item to gain a heart.
 heartAdded: 'Added 1 heart to you!'
+# The message when the player uses the "/withdraw" command to get their heart.
 heartWithdraw: 'Removed!'
+# The message when the player tries to use a heart item with a max heart.
 maxHeartAlready: 'You already have the maximum hearts allowed!'
+# The message when the player uses the "/withdraw" command without enough hearts.
 noEnoughHearts: 'You don''t have enough hearts to withdraw!'
+# The message when the player uses the "/withdraw" command with enough hearts but not fully healed.
 mustHaveFullHearts: 'You must have full heart first to withdraw!'
