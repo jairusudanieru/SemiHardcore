@@ -1,0 +1,6 @@
+heartRemoved: 'Remove 1 heart from you!'
+heartAdded: 'Added 1 heart to you!'
+heartWithdraw: 'Removed!'
+maxHeartAlready: 'You already have the maximum hearts allowed!'
+noEnoughHearts: 'You don''t have enough hearts to withdraw!'
+mustHaveFullHearts: 'You must have full heart first to withdraw!'

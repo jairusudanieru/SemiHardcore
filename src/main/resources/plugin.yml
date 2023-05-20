@@ -1,0 +1,12 @@
+name: SemiHardcore
+version: '${project.version}'
+main: plugin.semihardcore.SemiHardcore
+api-version: 1.19
+commands:
+  setprison:
+    description: Set the prison location
+    usage: /setprison
+    permission: op
+  withdraw:
+    description: Withdraw player hearts
+    usage: /withdraw
