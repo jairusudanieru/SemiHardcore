@@ -8,12 +8,12 @@ import java.io.File;
 
 public class WithdrawMessages {
 
-    private final JavaPlugin plugin;
+    //private final JavaPlugin plugin;
     private final FileConfiguration config;
     public WithdrawMessages(JavaPlugin plugin) {
         File configFile = new File(plugin.getDataFolder(), "message.yml");
         config = YamlConfiguration.loadConfiguration(configFile);
-        this.plugin = plugin;
+        //this.plugin = plugin;
     }
 
     public String noEnoughHearts() {
@@ -33,6 +33,7 @@ public class WithdrawMessages {
     public String heartWithdraw(int numHearts) {
         String message = config.getString("heartWithdraw");
         String amount = String.valueOf(numHearts);
+        if (message == null) return null;
         message = message.replace("&","§").replace("%amount%",amount);
         return message;
     }

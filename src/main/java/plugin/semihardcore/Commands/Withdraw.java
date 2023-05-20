@@ -16,7 +16,6 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 import plugin.semihardcore.Configuration.MaxHearts;
-import plugin.semihardcore.Messages.HeartMessages;
 import plugin.semihardcore.Messages.WithdrawMessages;
 import plugin.semihardcore.Recipes.HeartItem;
 

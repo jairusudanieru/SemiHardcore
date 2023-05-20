@@ -8,12 +8,12 @@ import java.io.File;
 
 public class HeartMessages {
 
-    private final JavaPlugin plugin;
+    //private final JavaPlugin plugin;
     private final FileConfiguration config;
     public HeartMessages(JavaPlugin plugin) {
         File configFile = new File(plugin.getDataFolder(), "message.yml");
         config = YamlConfiguration.loadConfiguration(configFile);
-        this.plugin = plugin;
+        //this.plugin = plugin;
     }
 
     public String heartRemoved() {
