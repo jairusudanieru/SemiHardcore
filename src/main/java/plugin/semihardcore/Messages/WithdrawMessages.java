@@ -31,8 +31,8 @@ public class WithdrawMessages {
     }
 
     public String heartWithdraw(int numHearts) {
-        String amount = String.valueOf(numHearts);
         String message = config.getString("heartWithdraw");
+        String amount = String.valueOf(numHearts);
         message = message.replace("&","§").replace("%amount%",amount);
         return message;
     }
