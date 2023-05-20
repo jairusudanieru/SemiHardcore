@@ -1,16 +1,22 @@
-# Set this to true to get the effect similar to eating an enchanted golden apple when the player respawns
+# Set this to true to get the effect similar to eating an enchanted golden apple when the player respawns.
 safeRespawn: true
-# The maximum heart a player is allowed to obtain
+# The maximum heart a player is allowed to obtain.
 maxHearts: 20
-# The name of the heart item
+# The name of the heart item.
+# Unfortunately, due to my lack of knowledge I can't think of a way for you to set a custom item for the player's
+# heart using the config. That's why this heart item is hard coded in this plugin. But if you know something about
+# Minecraft plugins, you can modify the source code of this plugin which can be found on my GitHub profile.
 heartName: 'Player Heart'
 
-# The location of the prison, where the player will be teleported to after their final death
+# The location of the prison, where the player will be teleported to after their final death.
+# If enabled is set to false, the player will be teleported to the spawn instead.
 prison:
-  ==: org.bukkit.Location
-  world: world
-  x: 0.0
-  y: 0.0
-  z: 0.0
-  pitch: 0.0
-  yaw: 0.0
+  enabled: false
+  location:
+    ==: org.bukkit.Location
+    world: world
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    pitch: 0.0
+    yaw: 0.0
