@@ -12,14 +12,16 @@ import java.io.File;
 
 public class Commands {
 
+    private final JavaPlugin plugin;
     private final FileConfiguration config;
     public Commands(JavaPlugin plugin) {
+        this.plugin = plugin;
         File configFile = new File(plugin.getDataFolder(), "config.yml");
         config = YamlConfiguration.loadConfiguration(configFile);
     }
 
     //Register the "withdraw" command
-    public void withdrawCommand(JavaPlugin plugin) {
+    public void withdrawCommand() {
         boolean enabled = config.getBoolean("commands.withdraw");
         if (!enabled) return;
         PluginCommand command = Bukkit.getPluginCommand("withdraw");
@@ -27,7 +29,7 @@ public class Commands {
     }
 
     //Register the "setprison" command
-    public void setPrisonCommand(JavaPlugin plugin) {
+    public void setPrisonCommand() {
         boolean enabled = config.getBoolean("prison.enabled");
         if (!enabled) return;
         PluginCommand command = Bukkit.getPluginCommand("setprison");

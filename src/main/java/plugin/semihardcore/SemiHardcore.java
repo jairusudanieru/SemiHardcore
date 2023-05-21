@@ -19,8 +19,8 @@ public final class SemiHardcore extends JavaPlugin {
         Bukkit.getServer().getPluginManager().registerEvents(new PlayerRespawn(this),this);
         Bukkit.getServer().getPluginManager().registerEvents(new PlayerUseHeart(this),this);
         PlayerHeart.registerRecipe(this);
-        commands.withdrawCommand(this);
-        commands.setPrisonCommand(this);
+        commands.withdrawCommand();
+        commands.setPrisonCommand();
     }
 
     @Override
