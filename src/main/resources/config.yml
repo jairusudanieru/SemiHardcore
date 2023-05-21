@@ -9,11 +9,11 @@ maxHearts: 20
 heartName: 'Player Heart'
 
 commands:
-# Setting this to true allows player to use the "/withdraw" command to withdraw their hearts.
+# Setting this to true allows player to use the "withdraw" command to withdraw their hearts.
   withdraw: false
 
 prison:
-  # The location of the prison, where the player will be teleported to after their final death.
+# The location of the prison, where the player will be teleported to after their final death.
   location:
     ==: org.bukkit.Location
     world: world
@@ -22,5 +22,5 @@ prison:
     z: 0.0
     pitch: 0.0
     yaw: 0.0
-  # If enabled is set to false, the player will be teleported to the spawn instead.
+# If enabled is set to false, the player will be teleported to the spawn instead.
   enabled: false

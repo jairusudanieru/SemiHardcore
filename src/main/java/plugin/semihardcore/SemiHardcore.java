@@ -15,12 +15,12 @@ public final class SemiHardcore extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         saveDefaultConfig();
+        commands.withdrawCommand();
+        commands.setPrisonCommand();
         saveResource("message.yml", false);
         Bukkit.getServer().getPluginManager().registerEvents(new PlayerRespawn(this),this);
         Bukkit.getServer().getPluginManager().registerEvents(new PlayerUseHeart(this),this);
         PlayerHeart.registerRecipe(this);
-        commands.withdrawCommand();
-        commands.setPrisonCommand();
     }
 
     @Override
